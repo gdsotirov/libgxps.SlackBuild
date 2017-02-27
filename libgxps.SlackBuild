@@ -17,13 +17,13 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 # 
-# $Id: libgxps.SlackBuild,v 1.1 2017/02/27 14:04:21 gsotirov Exp $
+# $Id: libgxps.SlackBuild,v 1.2 2017/02/27 14:53:26 gsotirov Exp $
 #
 
 . ../../slack-package.conf
 
 NAME=libgxps
-VERSION=0.1.0
+VERSION=0.2.2
 ARCH=${ARCH:-i486}
 BUILD=${BUILD:-1}
 
@@ -63,7 +63,8 @@ CXXFLAGS=$SLKCFLAGS \
             --libdir=/usr/lib${LIBDIRSUFFIX} \
             --mandir=/usr/man \
             --enable-shared=yes \
-            --enable-static=no || exit 4
+            --enable-static=no \
+            --enable-man || exit 4
 
 # Build & install
 make V=1 -j4 || exit 5
@@ -73,6 +74,7 @@ make DESTDIR=$PKG install || exit 6
 bin_perms $PKG
 ( cd $PKG; strip_bin; strip_lib )
 ( cd $SRC; create_docs $PKG $NAME-$VERSION )
+gzip_man $PKG
 
 mkdir -p $PKG/install
 install -m 644 $CWD/slack-desc     $PKG/install/slack-desc
