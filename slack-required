@@ -1,0 +1,7 @@
+cairo >= 1.10.2
+freetype >= 2.4.4
+glib2 >= 2.30.2
+glibc-solibs >= 2.13
+libarchive >= 2.8.4
+libjpeg >= v8a
+libtiff >= 3.9.4
