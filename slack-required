@@ -1,9 +1,25 @@
+acl >= 2.2.51
+attr >= 2.4.46
+bzip2 >= 1.0.6
 cairo >= 1.10.2
+expat >= 2.0.1
+fontconfig >= 2.9.0
 freetype >= 2.4.10
 glib2 >= 2.32.4
 glibc-solibs >= 2.15
 lcms2 >= 2.3
+libX11 >= 1.5.0
+libXau >= 1.0.7
+libXdmcp >= 1.1.1
+libXrender >= 0.9.7
 libarchive >= 2.8.5
+libffi >= 3.0.11
 libjpeg >= v8a
+libpng >= 1.4.12
 libtiff >= 3.9.6
+libxcb >= 1.1.1
+libxml2 >= 2.8.0
+openssl >= 1.0.1c | openssl-solibs >= 1.0.1c
+pixman >= 0.26.2
+xz >= 5.0.4
 zlib >= 1.2.6
